@@ -33,7 +33,7 @@ import { SearchBookComponent } from '../modules/SearchBookComponent/searchbook.c
     {path: '/home', component: HomeComponent},    
     {path: '/contact', component: ContactComponent},
     {path: '/books', component: ReadBookComponent},
-    {path: '/search', component: SearchBookComponent}     
+    {path: '/search', component: SearchBookComponent }     
     
     //{ path: '**', redirectTo: ['Home'] }
 ])
