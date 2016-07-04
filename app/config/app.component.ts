@@ -1,20 +1,19 @@
 import { Component } from '@angular/core';
-import { Router, ROUTER_DIRECTIVES, Routes } from '@angular/router';
-import { HomeComponent } from '../modules/HomeComponent/home.component';
-import { ContactComponent } from '../modules/ContactComponent/contact.component';
-import { ReadBookComponent } from '../modules/ReadBookComponent/readbook.component';
-import { SearchBookComponent } from '../modules/SearchBookComponent/searchbook.component';
+import { Router, ROUTER_DIRECTIVES} from '@angular/router';
 
 @Component({
     selector: 'TechAspect',
-    template: `  
+    template: `
        <div class="container">
            <nav>
-                <ul class="nav nav-pills">
-                    <li role="presentation"><a [routerLink]="['/home']">Home</a></li>
-                    <li role="presentation"><a [routerLink]="['/books']">ReadBooks</a></li>
-                    <li role="presentation"><a [routerLink]="['/search']">SearchBooks</a></li>
-                    <li role="presentation"><a [routerLink]="['/contact']">Contact US</a></li>                    
+                <ul class="nav nav-pills">                    
+                    <li role="presentation"><a [routerLink]="['home']">Home</a></li>
+                    <li role="presentation"><a [routerLink]="['readbook']">ReadBooks</a></li>
+                    <li role="presentation"><a [routerLink]="['search']">SearchBooks</a></li>                    
+                    <li role="presentation"><a [routerLink]="['contact']">Contact US</a></li> 
+                    <li role="presentation"><a [routerLink]="['login']">Login</a></li>
+                    <li role="presentation"><a [routerLink]="['readbook/:isbn']">ReadDetailsBook</a></li>
+
                 </ul>
            </nav> 
            <div class="content">
@@ -23,20 +22,11 @@ import { SearchBookComponent } from '../modules/SearchBookComponent/searchbook.c
            <footer> 
               <span> Copy Rights - TechAspect Solutions </span> 
            </footer>                
-        </div> 
-        
+        </div>         
     `,
     directives: [ROUTER_DIRECTIVES]
 })
 
-@Routes([     
-    {path: '/home', component: HomeComponent},    
-    {path: '/contact', component: ContactComponent},
-    {path: '/books', component: ReadBookComponent},
-    {path: '/search', component: SearchBookComponent }     
-    
-    //{ path: '**', redirectTo: ['Home'] }
-])
 
 export class AppComponent {
     

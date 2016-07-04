@@ -1,0 +1,12 @@
+<div class="read-books-container">
+    <h1>Read Books</h1>
+    <div class="row books-row">
+        <div *ngFor="let b of getBooksList" class="col-sm-4 books-list">
+            <div class=" thumbnail book-thumbnail">
+                <img src="http://service.techaspect.com:5000{{b.coverImage}}">
+                <p class="book-title"><span>Name:</span> {{b.bookName}}</p>
+                <a [routerLink]="['/readbook', b.ISBN]">Read More</a>
+            </div>
+        </div>
+    </div>
+</div>

@@ -9,14 +9,34 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var router_1 = require('@angular/router');
+var readbook_service_1 = require('../../services/readbook.service');
 var ReadBookComponent = (function () {
-    function ReadBookComponent() {
+    function ReadBookComponent(readBookService) {
+        this.readBookService = readBookService;
     }
+    ReadBookComponent.prototype.ngOnInit = function () {
+        this.getBooks();
+    };
+    // Get Books
+    ReadBookComponent.prototype.getBooks = function () {
+        var _this = this;
+        // now it's a simple subscription to the observable
+        this.readBookService.getBooksData()
+            .subscribe(function (data) {
+            var tempArray = [];
+            tempArray.push(data.Message);
+            _this.getBooksList = tempArray[0];
+        }, function (err) { return alert(err); }, function () { });
+    };
     ReadBookComponent = __decorate([
         core_1.Component({
-            template: "\n\t\t<div class='read-books'>\n\t\t\t<h1> This is ReadBooks Page </h1>\n\t\t</div>\n\t"
+            providers: [readbook_service_1.ReadBookService],
+            templateUrl: 'app/modules/ReadBookComponent/readbook.component.html',
+            styleUrls: ['app/modules/ReadBookComponent/readbook.component.css'],
+            directives: [router_1.ROUTER_DIRECTIVES]
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [readbook_service_1.ReadBookService])
     ], ReadBookComponent);
     return ReadBookComponent;
 }());

@@ -1,0 +1,26 @@
+<div class="login-form-container">
+    <h1>Login Form</h1>
+    <form (ngSubmit)="onSubmit()" #loginForm="ngForm">
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" required [(ngModel)]="email" ngControl="emailState" #emailState="ngForm">
+            <div [hidden]="emailState.valid || emailState.pristine" class="alert alert-danger">
+                Email is required
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" required [(ngModel)]="password" ngControl="passwordState" #passwordState="ngForm">
+            <div [hidden]="passwordState.valid || passwordState.pristine" class="alert alert-danger">
+                Password is required
+            </div>
+        </div>
+        <button type="submit" class="btn btn-default" [disabled]="!loginForm.form.valid || submitting">Login</button>
+    </form>
+    <div [hidden]="successMsg" class="alert alert-success">
+        Welcome {{userName}}! Logged in successfully
+    </div>
+    <div [hidden]="errorMsg" class="alert alert-danger">
+        {{errorTitle}}! {{errorDesc}}
+    </div>
+</div>

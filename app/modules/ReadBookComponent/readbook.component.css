@@ -1,0 +1,12 @@
+.read-books-container .books-row .books-list .book-thumbnail img {
+	width: 100%;
+	height: 250px;
+}
+
+.read-books-container .books-row .books-list .book-thumbnail .book-title {
+	margin-top: 10px;
+}
+
+.read-books-container .books-row .books-list .book-thumbnail .book-title span {
+	font-weight: 600;
+}

@@ -10,25 +10,15 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var router_1 = require('@angular/router');
-var home_component_1 = require('../modules/HomeComponent/home.component');
-var contact_component_1 = require('../modules/ContactComponent/contact.component');
-var readbook_component_1 = require('../modules/ReadBookComponent/readbook.component');
-var searchbook_component_1 = require('../modules/SearchBookComponent/searchbook.component');
 var AppComponent = (function () {
     function AppComponent() {
     }
     AppComponent = __decorate([
         core_1.Component({
             selector: 'TechAspect',
-            template: "  \n       <div class=\"container\">\n           <nav>\n                <ul class=\"nav nav-pills\">\n                    <li role=\"presentation\"><a [routerLink]=\"['/home']\">Home</a></li>\n                    <li role=\"presentation\"><a [routerLink]=\"['/books']\">ReadBooks</a></li>\n                    <li role=\"presentation\"><a [routerLink]=\"['/search']\">SearchBooks</a></li>\n                    <li role=\"presentation\"><a [routerLink]=\"['/contact']\">Contact US</a></li>                    \n                </ul>\n           </nav> \n           <div class=\"content\">\n                <router-outlet></router-outlet>\n           </div>\n           <footer> \n              <span> Copy Rights - TechAspect Solutions </span> \n           </footer>                \n        </div> \n        \n    ",
+            template: "\n       <div class=\"container\">\n           <nav>\n                <ul class=\"nav nav-pills\">                    \n                    <li role=\"presentation\"><a [routerLink]=\"['home']\">Home</a></li>\n                    <li role=\"presentation\"><a [routerLink]=\"['readbook']\">ReadBooks</a></li>\n                    <li role=\"presentation\"><a [routerLink]=\"['search']\">SearchBooks</a></li>                    \n                    <li role=\"presentation\"><a [routerLink]=\"['contact']\">Contact US</a></li> \n                    <li role=\"presentation\"><a [routerLink]=\"['login']\">Login</a></li>\n                    <li role=\"presentation\"><a [routerLink]=\"['readbook/:isbn']\">ReadDetailsBook</a></li>\n\n                </ul>\n           </nav> \n           <div class=\"content\">\n                <router-outlet></router-outlet>\n           </div>\n           <footer> \n              <span> Copy Rights - TechAspect Solutions </span> \n           </footer>                \n        </div>         \n    ",
             directives: [router_1.ROUTER_DIRECTIVES]
-        }),
-        router_1.Routes([
-            { path: '/home', component: home_component_1.HomeComponent },
-            { path: '/contact', component: contact_component_1.ContactComponent },
-            { path: '/books', component: readbook_component_1.ReadBookComponent },
-            { path: '/search', component: searchbook_component_1.SearchBookComponent }
-        ]), 
+        }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);
     return AppComponent;
