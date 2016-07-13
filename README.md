@@ -1,10 +1,11 @@
 # Project Name
 
-TODO: Write a project description
+Library Management System is a (Angular 2 R&D Application)  where users can login and request / read books online. It allows Admin users to add new books and approve user requested books. Also it allows users to add reviews and comments on a particular book.
 
 ## Installation
 
-TODO: Describe the installation process
+To compile TypeScript to Javascript - > npm run tsc <br/>
+To start the application - > npm start
 
 ## Usage
 
