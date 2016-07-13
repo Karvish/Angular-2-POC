@@ -4,29 +4,21 @@ Library Management System is a (Angular 2 R&D Application)  where users can logi
 
 ## Installation
 
-To compile TypeScript to Javascript - > npm run tsc <br/>
-To start the application - > npm start
+After downloading code <br/>
+Run npm install to install all dependencies <br/>
+Note: You should have Node JS installed in your computer
 
 ## Usage
 
-TODO: Write usage instructions
-
-## Contributing
-
-1. Fork it!
-2. Create your feature branch: `git checkout -b my-new-feature`
-3. Commit your changes: `git commit -am 'Add some feature'`
-4. Push to the branch: `git push origin my-new-feature`
-5. Submit a pull request :D
+To compile TypeScript to Javascript - > npm run tsc <br/>
+To start the application - > npm start
 
 ## History
 
-TODO: Write history
+Version 1.0
 
 ## Credits
 
-TODO: Write credits
+Gopal Rao Ambeer
 
-## License
-
-TODO: Write license
+ 
